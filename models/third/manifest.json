@@ -1,0 +1,20 @@
+{
+  "collection": "第三批 AI 生成备选资产",
+  "runtimeStatus": "optimized-public-scene-catalog",
+  "license": "用户提供 · 项目公开展示",
+  "assets": [
+    {
+      "id": "third-sunbird-emblem",
+      "label": "新太阳神鸟",
+      "collection": "第三批 AI 生成备选资产",
+      "category": "第三批 AI 生成备选资产",
+      "url": "/models/third/third-sunbird-emblem.glb",
+      "license": "用户提供 · 项目公开展示",
+      "defaultTargetSize": 20,
+      "triangles": 60000,
+      "bytes": 2101196,
+      "texture": 2048,
+      "sha256": "ab4fa78bce0648c9dcd7754bec6f3eb37e58130cd1659cea16c59bda79619242"
+    }
+  ]
+}

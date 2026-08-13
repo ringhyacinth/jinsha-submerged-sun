@@ -1,0 +1,98 @@
+{
+  "collection": "第二批 AI 生成备选资产",
+  "runtimeStatus": "optimized-public-scene-catalog",
+  "license": "User-provided by the project owner for this public scene.",
+  "assets": [
+    {
+      "id": "second-bronze-ding",
+      "label": "古铜鼎",
+      "collection": "第二批 AI 生成备选资产",
+      "category": "第二批 AI 生成备选资产",
+      "url": "/models/second/second-bronze-ding.glb",
+      "license": "用户提供 · 项目公开展示",
+      "defaultTargetSize": 8,
+      "triangles": 4739,
+      "bytes": 468324,
+      "texture": 1024,
+      "sha256": "7468fe02a03b88c41ee37d3c9615791a6efab656ec5277f1cf270130ee1f414c"
+    },
+    {
+      "id": "second-bronze-ritual-vessel",
+      "label": "古铜礼器",
+      "collection": "第二批 AI 生成备选资产",
+      "category": "第二批 AI 生成备选资产",
+      "url": "/models/second/second-bronze-ritual-vessel.glb",
+      "license": "用户提供 · 项目公开展示",
+      "defaultTargetSize": 8,
+      "triangles": 5013,
+      "bytes": 519252,
+      "texture": 1024,
+      "sha256": "5b9e7a4374001ef91a03a4067634ed3efeb81e638a7f03b3d8d89d7c77589215"
+    },
+    {
+      "id": "second-jade-dragon",
+      "label": "玉龙",
+      "collection": "第二批 AI 生成备选资产",
+      "category": "第二批 AI 生成备选资产",
+      "url": "/models/second/second-jade-dragon.glb",
+      "license": "用户提供 · 项目公开展示",
+      "defaultTargetSize": 9,
+      "triangles": 4946,
+      "bytes": 321332,
+      "texture": 1024,
+      "sha256": "4e8169a671568d33e94d05244f48986a91c73b57f33b5fc15adbdc4ba9a12dfc"
+    },
+    {
+      "id": "second-ancient-statue",
+      "label": "古代立像",
+      "collection": "第二批 AI 生成备选资产",
+      "category": "第二批 AI 生成备选资产",
+      "url": "/models/second/second-ancient-statue.glb",
+      "license": "用户提供 · 项目公开展示",
+      "defaultTargetSize": 11,
+      "triangles": 4919,
+      "bytes": 446280,
+      "texture": 1024,
+      "sha256": "f74db61429b84f0562347bedeac77f9b0a9cb436778338381a0a17d5942969cf"
+    },
+    {
+      "id": "second-ceremonial-staff",
+      "label": "礼仪权杖",
+      "collection": "第二批 AI 生成备选资产",
+      "category": "第二批 AI 生成备选资产",
+      "url": "/models/second/second-ceremonial-staff.glb",
+      "license": "用户提供 · 项目公开展示",
+      "defaultTargetSize": 10,
+      "triangles": 5003,
+      "bytes": 502332,
+      "texture": 1024,
+      "sha256": "07a4f5bdd47d24aa253826dd584297dead73cfb541e233966132c6174d79c49a"
+    },
+    {
+      "id": "second-ornate-candlestick",
+      "label": "纹饰烛台",
+      "collection": "第二批 AI 生成备选资产",
+      "category": "第二批 AI 生成备选资产",
+      "url": "/models/second/second-ornate-candlestick.glb",
+      "license": "用户提供 · 项目公开展示",
+      "defaultTargetSize": 9,
+      "triangles": 5018,
+      "bytes": 543440,
+      "texture": 1024,
+      "sha256": "e4a0dc51e303c5fec61b954119e9b0bb2974e5dcfbaa69b2fbe61b42d91fe363"
+    },
+    {
+      "id": "second-rusty-metal-grate",
+      "label": "锈蚀金属格栅",
+      "collection": "第二批 AI 生成备选资产",
+      "category": "第二批 AI 生成备选资产",
+      "url": "/models/second/second-rusty-metal-grate.glb",
+      "license": "用户提供 · 项目公开展示",
+      "defaultTargetSize": 10,
+      "triangles": 4792,
+      "bytes": 459536,
+      "texture": 1024,
+      "sha256": "d9ead1508ce946a14babdbb4050c7775defb67a6d23f3335b21d5e8b58b2d33a"
+    }
+  ]
+}
