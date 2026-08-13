@@ -1,0 +1,91 @@
+{
+  "collection": "Funes 跨时代真实文物装饰",
+  "license": "CC BY-NC 4.0",
+  "runtimeStatus": "optimized-private-noncommercial-catalog",
+  "assets": [
+    {
+      "id": "confucius-east-luduan",
+      "label": "孔林神道东侧甪端",
+      "collection": "Funes 备选",
+      "url": "/models/funes/confucius-east-luduan.glb",
+      "source": "https://funes.world/monuments/cemetery-of-confucius/models/j3vobymljhu05r0xcdpm6nav",
+      "license": "CC BY-NC 4.0",
+      "defaultTargetSize": 9,
+      "triangles": 39997,
+      "bytes": 2118736,
+      "texture": 2048
+    },
+    {
+      "id": "duan-alliance-stele",
+      "label": "段氏三十七部会盟碑",
+      "collection": "Funes 备选",
+      "url": "/models/funes/duan-alliance-stele.glb",
+      "source": "https://funes.world/monuments/duan-and-thirty-seven-tribes-alliance-stele/models/kyimnao08x4seyeacrpw9v03",
+      "license": "CC BY-NC 4.0",
+      "defaultTargetSize": 10,
+      "triangles": 17999,
+      "bytes": 954356,
+      "texture": 2048
+    },
+    {
+      "id": "hakka-migration-stele",
+      "label": "赣州客家南迁纪念碑",
+      "collection": "Funes 备选",
+      "url": "/models/funes/hakka-migration-stele.glb",
+      "source": "https://funes.world/monuments/ganzhou-hakka-southward-migration-memorial-stele-1/models/j171c7jgibxdgp80h9sbcsar",
+      "license": "CC BY-NC 4.0",
+      "defaultTargetSize": 11,
+      "triangles": 24000,
+      "bytes": 1135524,
+      "texture": 2048
+    },
+    {
+      "id": "miaozhan-vajra-pagoda",
+      "label": "妙湛寺金刚塔",
+      "collection": "Funes 备选",
+      "url": "/models/funes/miaozhan-vajra-pagoda.glb",
+      "source": "https://funes.world/monuments/vajra-pagoda-of-miaozhan-monastery/models/cgh8v20d6muc3y89tazhvyj9",
+      "license": "CC BY-NC 4.0",
+      "defaultTargetSize": 17,
+      "triangles": 49999,
+      "bytes": 2289224,
+      "texture": 2048
+    },
+    {
+      "id": "taixu-relic-stupa",
+      "label": "武昌太虚法师舍利塔",
+      "collection": "Funes 备选",
+      "url": "/models/funes/taixu-relic-stupa.glb",
+      "source": "https://funes.world/monuments/relic-stupa-of-master-taixu-in-wuchang/models/tj798100mlksd5s84vbbw9v0",
+      "license": "CC BY-NC 4.0",
+      "defaultTargetSize": 13,
+      "triangles": 30000,
+      "bytes": 1640072,
+      "texture": 2048
+    },
+    {
+      "id": "tang-stone-lantern",
+      "label": "代县唐代观音寺石灯",
+      "collection": "Funes 备选",
+      "url": "/models/funes/tang-stone-lantern.glb",
+      "source": "https://funes.world/monuments/tang-dynasty-stone-lantern-of-dai-county/models/unk9iisl6bwnpfzi9st5f1d4",
+      "license": "CC BY-NC 4.0",
+      "defaultTargetSize": 10,
+      "triangles": 28000,
+      "bytes": 1348892,
+      "texture": 2048
+    },
+    {
+      "id": "xizi-pagoda",
+      "label": "茶亭镇惜字塔",
+      "collection": "Funes 备选",
+      "url": "/models/funes/xizi-pagoda.glb",
+      "source": "https://funes.world/monuments/chating-town-xizi-pagoda/models/vfagrnk63ux4jkrqfg5j0ync",
+      "license": "CC BY-NC 4.0",
+      "defaultTargetSize": 15,
+      "triangles": 35998,
+      "bytes": 2311972,
+      "texture": 2048
+    }
+  ]
+}

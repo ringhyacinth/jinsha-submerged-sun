@@ -1,0 +1,177 @@
+{
+  "generatedAt": "2026-08-11T17:50:16.047Z",
+  "assets": [
+    {
+      "id": "ancient-bird",
+      "url": "/models/jinsha/ancient-bird.glb",
+      "source": "ancient+bird+sculpture+3d+model.glb",
+      "triangles": 4684,
+      "texture": 1024,
+      "bytes": 413576
+    },
+    {
+      "id": "sunbird-emblem",
+      "url": "/models/jinsha/sunbird-emblem.glb",
+      "source": "circular+emblem+3d+model.glb",
+      "triangles": 5321,
+      "texture": 512,
+      "bytes": 292416
+    },
+    {
+      "id": "mask-a",
+      "url": "/models/jinsha/mask-a.glb",
+      "source": "ancient+mask+3d+model.glb",
+      "triangles": 4907,
+      "texture": 1024,
+      "bytes": 289292
+    },
+    {
+      "id": "mask-b",
+      "url": "/models/jinsha/mask-b.glb",
+      "source": "ancient+mask+sculpture+3d+model.glb",
+      "triangles": 4779,
+      "texture": 1024,
+      "bytes": 315116
+    },
+    {
+      "id": "golden-wand",
+      "url": "/models/jinsha/golden-wand.glb",
+      "source": "golden+wand+3d+model.glb",
+      "triangles": 4879,
+      "texture": 1024,
+      "bytes": 377012
+    },
+    {
+      "id": "bronze-giant",
+      "url": "/models/jinsha/bronze-giant.glb",
+      "source": "green+stone+statue+3d+model.glb",
+      "triangles": 5083,
+      "texture": 2048,
+      "bytes": 956332
+    },
+    {
+      "id": "ruin-gate",
+      "url": "/models/jinsha/ruin-gate.glb",
+      "source": "ornate+iron+gate+3d+model.glb",
+      "triangles": 4844,
+      "texture": 1024,
+      "bytes": 543940
+    },
+    {
+      "id": "sun-wheel",
+      "url": "/models/jinsha/sun-wheel.glb",
+      "source": "rusted+steering+wheel+3d+model.glb",
+      "triangles": 4864,
+      "texture": 1024,
+      "bytes": 312292
+    },
+    {
+      "id": "carved-ruin",
+      "url": "/models/jinsha/carved-ruin.glb",
+      "source": "carved+stone+ruin+3d+model.glb",
+      "triangles": 4593,
+      "texture": 1024,
+      "bytes": 562404
+    },
+    {
+      "id": "stone-box",
+      "url": "/models/jinsha/stone-box.glb",
+      "source": "stone+box+3d+model.glb",
+      "triangles": 4982,
+      "texture": 1024,
+      "bytes": 306292
+    },
+    {
+      "id": "stone-block",
+      "url": "/models/jinsha/stone-block.glb",
+      "source": "stone+carved+block+3d+model.glb",
+      "triangles": 4695,
+      "texture": 1024,
+      "bytes": 345636
+    },
+    {
+      "id": "stone-cube",
+      "url": "/models/jinsha/stone-cube.glb",
+      "source": "stone+cube+3d+model.glb",
+      "triangles": 4915,
+      "texture": 1024,
+      "bytes": 332684
+    },
+    {
+      "id": "stone-monolith",
+      "url": "/models/jinsha/stone-monolith.glb",
+      "source": "stone+monolith+3d+model.glb",
+      "triangles": 4633,
+      "texture": 1024,
+      "bytes": 358020
+    },
+    {
+      "id": "stone-pillar",
+      "url": "/models/jinsha/stone-pillar.glb",
+      "source": "stone+pillar+3d+model.glb",
+      "triangles": 4793,
+      "texture": 1024,
+      "bytes": 328868
+    },
+    {
+      "id": "stone-sculpture",
+      "url": "/models/jinsha/stone-sculpture.glb",
+      "source": "stone+sculpture+3d+model.glb",
+      "triangles": 4926,
+      "texture": 1024,
+      "bytes": 350244
+    },
+    {
+      "id": "stone-stair-a",
+      "url": "/models/jinsha/stone-stair-a.glb",
+      "source": "stone+stair+3d+model.glb",
+      "triangles": 4651,
+      "texture": 1024,
+      "bytes": 388692
+    },
+    {
+      "id": "stone-stair-b",
+      "url": "/models/jinsha/stone-stair-b.glb",
+      "source": "stone+stairs+3d+model.glb",
+      "triangles": 5006,
+      "texture": 1024,
+      "bytes": 449316
+    },
+    {
+      "id": "pbr-rock-07",
+      "url": "/models/open/pbr-rock-07.glb",
+      "source": "open/PolyHaven/rock_07/rock_07_1k.gltf",
+      "sourceUrl": "https://polyhaven.com/a/rock_07",
+      "rights": "CC0 1.0",
+      "sourceTriangles": 14844,
+      "triangles": 5200,
+      "texture": 1024,
+      "detailTexture": 512,
+      "bytes": 377552
+    },
+    {
+      "id": "pbr-boulder-01",
+      "url": "/models/open/pbr-boulder-01.glb",
+      "source": "open/PolyHaven/boulder_01/boulder_01_1k.gltf",
+      "sourceUrl": "https://polyhaven.com/a/boulder_01",
+      "rights": "CC0 1.0",
+      "sourceTriangles": 66122,
+      "triangles": 7600,
+      "texture": 1024,
+      "detailTexture": 512,
+      "bytes": 719148
+    },
+    {
+      "id": "barramundi-fish",
+      "url": "/models/open/barramundi-fish.glb",
+      "source": "open/Khronos/BarramundiFish.glb",
+      "sourceUrl": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/BarramundiFish",
+      "rights": "CC0 1.0",
+      "sourceTriangles": 3864,
+      "triangles": 1800,
+      "texture": 512,
+      "detailTexture": 512,
+      "bytes": 166408
+    }
+  ]
+}

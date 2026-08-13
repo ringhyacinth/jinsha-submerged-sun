@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#061c22" />
+    <meta name="description" content="潜入沉睡于水下的金沙文明，追随鱼群，在湖面之上仰望青铜巨人。" />
+    <style>
+      html, body { margin: 0; min-height: 100%; background: #041719; color-scheme: dark; }
+      body { overflow: hidden; }
+    </style>
+    <title>沉海金沙 · 青铜巨人</title>
+    <script type="module" crossorigin src="/jinsha-submerged-sun/assets/game-CweTQDNv.js"></script>
+    <link rel="modulepreload" crossorigin href="/jinsha-submerged-sun/assets/three.core-vo1jG6Th.js">
+    <link rel="modulepreload" crossorigin href="/jinsha-submerged-sun/assets/GLTFLoader-CpDFkW09.js">
+    <link rel="modulepreload" crossorigin href="/jinsha-submerged-sun/assets/Pass-CjGG-1RY.js">
+    <link rel="stylesheet" crossorigin href="/jinsha-submerged-sun/assets/game-DVNGBFkT.css">
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="scene" aria-label="沉海金沙三维场景"></canvas>
+      <audio id="background-music" src="/jinsha-submerged-sun/audio/bronze-tides.mp3" loop preload="metadata"></audio>
+
+      <section id="intro" class="intro" aria-labelledby="title">
+        <div class="intro__veil"></div>
+        <div class="intro__content">
+          <p class="eyebrow">JINSHA · THE SUBMERGED SUN</p>
+          <h1 id="title">沉海金沙</h1>
+          <p class="intro__lead">在金色的神鸟之上坠落，穿过被沙埋藏的面具，<br />追随鱼群，游向那个还未被海水吞没的巨人。</p>
+          <button id="enter" class="enter" type="button">
+            <span>潜入水下</span><small>ENTER / TAP</small>
+          </button>
+          <p class="intro__hint"><span class="intro__hint-desktop">W 前游 · S 后退 · A/D 侧游 · 鼠标观看 · SPACE/SHIFT 升降 · E 冲刺</span><span class="intro__hint-touch">触控遥控游泳 · 拖动画面转向 · 靠近文物点 1 聆听</span></p>
+        </div>
+      </section>
+
+      <header class="hud" aria-live="polite">
+        <div class="hud__brand"><span>沉海金沙</span><small>THE SUBMERGED SUN</small></div>
+        <div class="hud__chapter">
+          <span id="chapter-index">01</span>
+          <div><strong id="chapter-title">太阳神鸟</strong><small id="chapter-subtitle">向金色的光坠落</small></div>
+        </div>
+        <div class="hud__actions">
+          <button id="music-toggle" type="button" title="开启或关闭场景音乐" aria-pressed="true">音乐 · 待机</button>
+          <button id="quality-toggle" type="button" title="切换画质">画质 · 高</button>
+          <button id="editor-toggle" type="button" title="打开场景编辑器">F2 · 编辑器</button>
+        </div>
+      </header>
+
+      <div class="reticle" aria-hidden="true"><i></i><i></i></div>
+      <div id="prompt" class="prompt"></div>
+      <div id="artifact-interact" class="artifact-interact" aria-hidden="true">
+        <span>古物正在低语</span>
+        <strong id="artifact-interact-label">文物</strong>
+        <small><kbd>1</kbd> 聆听</small>
+      </div>
+      <section id="artifact-dialog" class="artifact-dialog" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="artifact-dialog-title">
+        <img class="artifact-dialog__frame" src="/jinsha-submerged-sun/ui/bronze-dialog-frame.png" alt="" aria-hidden="true" />
+        <div class="artifact-dialog__content">
+          <header class="artifact-dialog__header">
+            <div>
+              <small id="artifact-dialog-site">遗址</small>
+              <h2 id="artifact-dialog-title">文物低语</h2>
+            </div>
+            <span id="artifact-dialog-period">古蜀</span>
+          </header>
+          <blockquote id="artifact-dialog-line"></blockquote>
+          <footer class="artifact-dialog__footer">
+            <span id="artifact-dialog-progress">01 / 04</span>
+            <div>
+              <button id="artifact-dialog-close" type="button">结束 · ESC</button>
+              <button id="artifact-dialog-advance" type="button">继续聆听 · 1</button>
+            </div>
+          </footer>
+        </div>
+      </section>
+      <div id="transition" class="transition"><span></span></div>
+
+      <section id="mobile-controls" class="mobile-controls" aria-label="潜泳触控遥控器" aria-hidden="true">
+        <p class="mobile-controls__look-hint">在画面空白处拖动 · 转向观察</p>
+        <div class="mobile-controls__movement" aria-label="上下左右移动">
+          <button class="mobile-control mobile-control--rise" type="button" data-mobile-action="rise" aria-label="上浮" aria-pressed="false"><span>↑</span><small>上浮</small></button>
+          <button class="mobile-control mobile-control--left" type="button" data-mobile-action="left" aria-label="向左游" aria-pressed="false"><span>←</span><small>左游</small></button>
+          <span class="mobile-controls__hub" aria-hidden="true"></span>
+          <button class="mobile-control mobile-control--right" type="button" data-mobile-action="right" aria-label="向右游" aria-pressed="false"><span>→</span><small>右游</small></button>
+          <button class="mobile-control mobile-control--dive" type="button" data-mobile-action="dive" aria-label="下潜" aria-pressed="false"><span>↓</span><small>下潜</small></button>
+        </div>
+        <div class="mobile-controls__actions">
+          <button class="mobile-control mobile-control--interact" type="button" data-mobile-interact aria-label="聆听文物" aria-disabled="true" disabled><span>1</span><small>聆听</small></button>
+          <button class="mobile-control mobile-control--forward" type="button" data-mobile-action="forward" aria-label="向前游" aria-pressed="false"><span>↑</span><small>前进</small></button>
+        </div>
+      </section>
+
+      <a class="site-credits" href="/jinsha-submerged-sun/credits.html" target="_blank" rel="noopener">非商业概念展示 · 资产来源</a>
+
+      <aside id="editor" class="editor is-hidden" aria-label="场景编辑器">
+        <header class="editor__header">
+          <div><small>DIRECTOR MODE</small><strong>金沙场景编辑器</strong></div>
+          <button id="editor-collapse" type="button" aria-label="收起编辑器">−</button>
+        </header>
+        <div class="editor__body">
+          <section class="editor__section editor__camera">
+            <span class="editor__label">编辑器飞行镜头</span>
+            <p>跟随开启：WASD 操控 Alice，右键缓慢转向；关闭后移动位置自由，但俯仰受限且不可翻滚。滚轮快速推近 / 拉远，Home 镜头归位。</p>
+            <label class="editor__check"><input id="follow-character" type="checkbox" checked /> 跟随角色编辑</label>
+            <pre id="camera-readout">镜头等待中</pre>
+          </section>
+          <section class="editor__section editor__visual">
+            <span class="editor__label">水体 / 焦散 / 景深 / 材质</span>
+            <label for="surface-wave-scale">水面波浪大小 <output id="surface-wave-scale-value">1.00×</output></label>
+            <input id="surface-wave-scale" type="range" min="0.25" max="2.5" step="0.05" value="1" />
+            <label for="underwater-brightness">水下亮度 <output id="underwater-brightness-value">1.08×</output></label>
+            <input id="underwater-brightness" type="range" min="0.75" max="1.35" step="0.01" value="1.08" />
+            <label for="fog-density">远景雾强度 <output id="fog-value">0.009</output></label>
+            <input id="fog-density" type="range" min="0.005" max="0.04" step="0.001" value="0.009" />
+            <label for="caustic-strength">文物与海床焦散 <output id="caustic-value">0.68</output></label>
+            <input id="caustic-strength" type="range" min="0" max="1.5" step="0.02" value="0.68" />
+            <label class="editor__check"><input id="dof-enabled" type="checkbox" /> 景深始终聚焦 Alice</label>
+            <label for="dof-strength">景深强度 <output id="dof-strength-value">0.00000</output></label>
+            <input id="dof-strength" type="range" min="0" max="0.0005" step="0.00002" value="0" />
+            <label for="dof-maxblur">最大虚化 <output id="dof-maxblur-value">0.000</output></label>
+            <input id="dof-maxblur" type="range" min="0" max="0.025" step="0.001" value="0" />
+            <label for="dust-amount">表面积灰 <output id="dust-value">0.34</output></label>
+            <input id="dust-amount" type="range" min="0" max="1" step="0.02" value="0.34" />
+          </section>
+          <section class="editor__section">
+            <label for="checkpoint">导演检查点</label>
+            <div class="editor__row">
+              <select id="checkpoint"></select>
+              <button id="jump-checkpoint" type="button">跳转</button>
+            </div>
+          </section>
+          <section class="editor__section">
+            <label for="target">场景物件</label>
+            <select id="target"></select>
+            <p id="selection-status" class="editor__status">在画面中点选物件，或从列表选择</p>
+            <button id="lock-toggle" class="editor__lock-toggle" type="button">锁定当前 · 禁止画面点选</button>
+            <p class="editor__hint">锁定只影响编辑器点选和变换，不影响画面显示；仍可从上方列表选择并解除锁定。环境层默认锁定。</p>
+          </section>
+          <section class="editor__section">
+            <span class="editor__label">变换工具</span>
+            <div class="editor__segmented">
+              <button type="button" data-mode="translate" class="is-active">G 移动</button>
+              <button type="button" data-mode="rotate">R 旋转</button>
+              <button type="button" data-mode="scale">S 缩放</button>
+            </div>
+            <div class="editor__segmented editor__axes">
+              <button type="button" data-axis="ALL" class="is-active">全轴</button>
+              <button type="button" data-axis="X">X</button>
+              <button type="button" data-axis="Y">Y</button>
+              <button type="button" data-axis="Z">Z</button>
+              <button id="space-toggle" type="button">世界轴</button>
+            </div>
+            <pre id="transform-readout">未选择</pre>
+          </section>
+          <section class="editor__section">
+            <span class="editor__label">对象操作</span>
+            <div class="editor__grid">
+              <button id="save-transform" type="button">保存当前</button>
+              <button id="reset-transform" type="button">重置当前</button>
+              <button id="duplicate-current" class="editor__grid-wide" type="button">复制当前资产 · Ctrl+D</button>
+              <button id="visibility-toggle" type="button">隐藏当前</button>
+              <button id="delete-toggle" type="button">删除当前</button>
+            </div>
+            <button id="save-all-scene" class="editor__accent editor__save-all" type="button">保存全部场景与角色位置 · Ctrl+S</button>
+          </section>
+          <section class="editor__section editor__asset">
+            <span class="editor__label">项目备选资产库 · Web 优化版</span>
+            <p>点击即可放到镜头前；也可以拖到三维画面的具体位置。摆放、旋转和缩放会随场景 JSON 保存。</p>
+            <div id="asset-catalog" class="editor__catalog" aria-label="项目备选资产目录"></div>
+            <small>包含 Funes 非商业文物装饰与第二、三批用户提供 AI 资产 · 具体许可见每件选中状态</small>
+          </section>
+          <section class="editor__section editor__asset">
+            <span class="editor__label">添加新资产</span>
+            <p>把一个或多个 GLB 拖到画面中。模型会出现在镜头前，并保存在当前浏览器，刷新后自动恢复。</p>
+            <input id="add-model-file" type="file" accept=".glb,model/gltf-binary" multiple hidden />
+            <button id="add-model" class="editor__accent" type="button">添加 GLB 到场景</button>
+            <div id="asset-dropzone" class="editor__dropzone">拖放 GLB 到这里或直接拖到三维画面</div>
+            <small id="asset-persistence-status">浏览器资产库等待中</small>
+            <p class="editor__storage-note">Chrome 与 Codex 是两套独立浏览器存储；正式摆放请以 Chrome 中打开的同一网址为准。项目备选资产可随 JSON 跨浏览器恢复，本地拖入的 GLB 需在目标浏览器重新导入。</p>
+          </section>
+          <section class="editor__section editor__asset">
+            <span class="editor__label">模型替换</span>
+            <p>选中占位物后可直接加载本地 GLB。容器的位置、旋转与缩放保持不变。</p>
+            <input id="model-file" type="file" accept=".glb,model/gltf-binary" hidden />
+            <button id="replace-model" class="editor__accent" type="button">为当前物件选择 GLB</button>
+            <small id="asset-status">当前使用程序化占位模型</small>
+          </section>
+          <section class="editor__section">
+            <span class="editor__label">布局数据</span>
+            <textarea id="layout-json" spellcheck="false"></textarea>
+            <div class="editor__grid">
+              <button id="copy-layout" type="button">复制 JSON</button>
+              <button id="apply-layout" type="button">应用 JSON</button>
+              <button id="export-layout" type="button">下载</button>
+              <button id="reset-layout" type="button">全部重置</button>
+            </div>
+            <p id="save-status" class="editor__status">调整会自动保存在当前浏览器</p>
+          </section>
+        </div>
+      </aside>
+
+      <div id="probe" hidden></div>
+    </main>
+  </body>
+</html>
