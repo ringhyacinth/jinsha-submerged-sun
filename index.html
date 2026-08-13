@@ -10,11 +10,11 @@
       body { overflow: hidden; }
     </style>
     <title>沉海金沙 · 青铜巨人</title>
-    <script type="module" crossorigin src="/jinsha-submerged-sun/assets/game-BL4VQN8M.js"></script>
+    <script type="module" crossorigin src="/jinsha-submerged-sun/assets/game-BDEhvTUd.js"></script>
     <link rel="modulepreload" crossorigin href="/jinsha-submerged-sun/assets/three.core-vo1jG6Th.js">
     <link rel="modulepreload" crossorigin href="/jinsha-submerged-sun/assets/GLTFLoader-CpDFkW09.js">
     <link rel="modulepreload" crossorigin href="/jinsha-submerged-sun/assets/Pass-CjGG-1RY.js">
-    <link rel="stylesheet" crossorigin href="/jinsha-submerged-sun/assets/game-CfeFPiaf.css">
+    <link rel="stylesheet" crossorigin href="/jinsha-submerged-sun/assets/game-BTMCDczh.css">
   </head>
   <body>
     <main id="app">
@@ -78,16 +78,17 @@
 
       <section id="mobile-controls" class="mobile-controls" aria-label="潜泳触控遥控器" aria-hidden="true">
         <p class="mobile-controls__look-hint">在画面空白处拖动 · 转向观察</p>
-        <div class="mobile-controls__movement" aria-label="上下左右移动">
+        <div class="mobile-controls__joystick" data-mobile-joystick aria-label="潜泳摇杆" role="application" tabindex="0">
+          <span class="mobile-controls__joystick-ring" aria-hidden="true"></span>
+          <span class="mobile-controls__joystick-stick" data-mobile-joystick-stick aria-hidden="true"><span>✦</span></span>
+          <small>移动</small>
+        </div>
+        <div class="mobile-controls__vertical" aria-label="上下浮潜">
           <button class="mobile-control mobile-control--rise" type="button" data-mobile-action="rise" aria-label="上浮" aria-pressed="false"><span>↑</span><small>上浮</small></button>
-          <button class="mobile-control mobile-control--left" type="button" data-mobile-action="left" aria-label="向左游" aria-pressed="false"><span>←</span><small>左游</small></button>
-          <span class="mobile-controls__hub" aria-hidden="true"></span>
-          <button class="mobile-control mobile-control--right" type="button" data-mobile-action="right" aria-label="向右游" aria-pressed="false"><span>→</span><small>右游</small></button>
           <button class="mobile-control mobile-control--dive" type="button" data-mobile-action="dive" aria-label="下潜" aria-pressed="false"><span>↓</span><small>下潜</small></button>
         </div>
         <div class="mobile-controls__actions">
           <button class="mobile-control mobile-control--interact" type="button" data-mobile-interact aria-label="聆听文物" aria-disabled="true" disabled><span>1</span><small>聆听</small></button>
-          <button class="mobile-control mobile-control--forward" type="button" data-mobile-action="forward" aria-label="向前游" aria-pressed="false"><span>↑</span><small>前进</small></button>
         </div>
       </section>
 
